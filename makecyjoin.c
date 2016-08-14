@@ -3,11 +3,11 @@
 				 in file cyjoin_list.txt and to make CYJOIN cards in the file
 				 cyjoin.bdf for input to NASTRAN
 
-	Written by:  Kyle R. Myers
-				 Applied Research Laboratory
-				 The Pennsylvania State University
-				 University Park, PA 16804
-				 December 2015
+			Written by:  Kyle R. Myers
+			Applied Research Laboratory
+			The Pennsylvania State University
+			University Park, PA 16804
+			December 2015
 */
 
 #include <stdio.h>
