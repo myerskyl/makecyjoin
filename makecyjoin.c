@@ -31,18 +31,19 @@ int main()
 
 	// initialize node array
 	int nLines = 0;
-    int c = '\0';
-    int pc = '\n';
+	int c = '\0';
+	int pc = '\n';
 
-    while (c = fgetc(fi), c != EOF) {
-        if (c == '\n'  &&  pc != '\n')
-            nLines++;
-        pc = c;
-    }
-    if (pc != '\n')
-        nLines++;
+	while (c = fgetc(fi), c != EOF) {
+		if (c == '\n'  &&  pc != '\n')
+			nLines++;
+		pc = c;
+	}
 
-    rewind(fi);
+	if (pc != '\n')
+		nLines++;
+
+	rewind(fi);
 	const int nGridPts = nLines*2;
 	int gridPts[nGridPts];
 
@@ -59,7 +60,7 @@ int main()
 			if (pairNum == 2)
 				break;
 
-            int lineChar = *p;
+			int lineChar = *p;
 			if (isdigit(lineChar)) {
 				pairNum++;
 				long val = strtol(p, &p, 10);
@@ -77,25 +78,25 @@ int main()
 	ii = 0;
 	int fieldNum = 3;
 	for(ii = 0; ii < nGridPts; ii = ii + 2) {
-        fprintf(fo,"%8i", gridPts[ii]);
+		fprintf(fo,"%8i", gridPts[ii]);
 		fieldNum++;
 		if (fieldNum == 9) {
 			fprintf(fo," +\n+       ");
 			fieldNum = 1;
 		}
-    }
+        }
 
 	fprintf(fo,"\nCYJOIN         2       C");
 	ii = 1;
 	fieldNum = 3;
 	for(ii = 1; ii < nGridPts; ii = ii + 2) {
-        fprintf(fo,"%8i", gridPts[ii]);
+		fprintf(fo,"%8i", gridPts[ii]);
 		fieldNum++;
 		if (fieldNum == 9) {
 			fprintf(fo," +\n+       ");
 			fieldNum = 1;
 		}
-    }
+	}
 
 	fclose(fi);
 	fclose(fo);
