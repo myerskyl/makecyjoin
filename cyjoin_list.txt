@@ -3,12 +3,9 @@ Node 3 coincident with 4 ( 0.000503 )
 Node 5 coincident with 6 ( 0.000503 )
 Node 7 coincident with 8 ( 0.000503 )
 Node 9 coincident with 10 ( 0.000503 )
+
 Node 11 coincident with 12 ( 0.000503 )
 Node 13 coincident with 14 ( 0.000503 )
 Node 15 coincident with 16 ( 0.000503 )
 Node 17 coincident with 18 ( 0.000503 )
 Node 19 coincident with 20 ( 0.000503 )
-
-
-
-
